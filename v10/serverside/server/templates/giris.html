@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTRA SBV</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+    <section class="full-frame overflow-hidden bg-dark">
+        <div class="container full-frame">
+            <div class="full-frame d-flex align-items-center justify-content-center justify-content-lg">
+
+                <form method="POST" role="form">
+                    {% csrf_token %}
+                    {{form.username}}
+                    {{form.password}}
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
