@@ -1,7 +1,10 @@
 import os
 import socket
+from master import World
 
-HOST = "10.90.158.151"  # Standard loopback interface address (localhost)
+controlside = World()
+# HOST = "10.90.158.151"  # Standard loopback interface address (localhost)
+HOST = "192.168.1.102"
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -14,4 +17,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             data = conn.recv(1024).decode("utf-8")
             if not data: pass
             else:
-                conn.send(str(os.system(data)).encode("utf-8"))
+                # FUNCTIONS HERE!
+                for thekey in controlside.posibilites.keys:
+                    if data==thekey: eval(controlside.posibilites[thekey], '(self)')
+
+"""cmd /k "taskkill /f /IM servisatk.exe /t"""
