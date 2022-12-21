@@ -22,5 +22,3 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                     if data==thekey:
                         rundef = getattr(World, controlside.posibilites[thekey])
                         rundef(controlside)
-
-"""cmd /k "taskkill /f /IM servisatk.exe /t"""
