@@ -19,6 +19,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             else:
                 # FUNCTIONS HERE!
                 for thekey in controlside.posibilites.keys:
-                    if data==thekey: eval(controlside.posibilites[thekey], '(self)')
+                    if data==thekey:
+                        rundef = getattr(World, controlside.posibilites[thekey])
+                        rundef(controlside)
 
 """cmd /k "taskkill /f /IM servisatk.exe /t"""
