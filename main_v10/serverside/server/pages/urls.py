@@ -19,5 +19,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('actions/', views.actions),
+    path('actions/', views.actions, name="hareketler"),
+    path('datas/', views.veriler, name="veriler"),
+    path('aktifet/<slug:slug>', views.aktifet, name="aktifet"),
+    path('pasifet/<slug:slug>', views.pasifet, name="pasifet"),
 ]
