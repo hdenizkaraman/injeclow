@@ -17,10 +17,7 @@
     <div class="action-frame">
         {% for action in hareket %}
         <div class="action-item">
-            <span> {{action.activity}} </span>
-            <span> {{action.name}} </span>
-            <a href="{% url 'aktifet' action.slug %}">Aktif Et</a>
-            <a href="{% url 'pasifet' action.slug %}">Pasif Et</a>
+            <span id="{{action.activity}}"> {{action.name}}  </span>
         </div>
         {% endfor %}
     </div>

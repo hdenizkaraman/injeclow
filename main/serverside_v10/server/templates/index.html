@@ -19,7 +19,7 @@
                 id="greeting-content">
                 <div class="w-100 d-flex flex-column justify-content-center align-items-center">
 
-                    <button class="hackerbutton mb-5" style="border-color: #981e1e;"> <img src="{% static 'img/demon.png' %}"> </button>
+                    <button onclick="location.href='{% url 'hareketler' %}';" class="hackerbutton mb-5" style="border-color: #981e1e;"> <img src="{% static 'img/demon.png' %}"> </button>
                     <button onclick="location.href='{% url 'getout' %}';" class="hackerbutton" style="border-color: #c8b042;"> <img src="{% static 'img/logout.png' %}"> </button>
 
                 </div>

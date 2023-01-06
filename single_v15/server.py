@@ -20,13 +20,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 for thekey in controlside.posibilites.keys():
                     if thekey in data:
                         if thekey=="cmd":
-                            print("in cmd")
                             datanew = data.split()
                             datanew.remove("cmd")
                             datanewstr = " ".join(str(x) for x in datanew)
-                            print(datanewstr)
                             getattr(controlside, controlside.posibilites[thekey])(datanewstr)
                         else:
-                            print("in nocmd")
                             rundef = getattr(World, controlside.posibilites[thekey])
                             rundef(controlside)
