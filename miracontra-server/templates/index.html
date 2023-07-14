@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTRA SBV</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+    <section class="full-frame overflow-hidden">
+        <div class="container full-frame">
+            <div class="full-frame d-flex align-items-center justify-content-center justify-content-lg-start setupper"
+                id="greeting-content">
+                <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+
+                    <button onclick="location.href='{% url 'hareketler' %}';" class="hackerbutton mb-5" style="border-color: #981e1e;"> <img src="{% static 'img/demon.png' %}"> </button>
+                    <button onclick="location.href='{% url 'getout' %}';" class="hackerbutton" style="border-color: #c8b042;"> <img src="{% static 'img/logout.png' %}"> </button>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="greetingVideoFrame">
+            <div class="darkoverlay" style="z-index: -1 !important;"></div>
+            <video src="{% static 'img/backvideo.mp4' %}" autoplay muted loop id="greetingVideo"></video>
+        </div>
+    </section>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

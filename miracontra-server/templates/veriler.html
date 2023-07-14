@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sbvAct1</title>
+
+    <style>
+    .action-frame{display: flex; flex-direction: column;}
+    .action-item{display: flex; margin: 10px 0;}
+    .action-item > * {margin-left: 15px;} 
+    </style>
+</head>
+<body>
+    
+    <div class="action-frame">
+        {% for action in hareket %}
+        <div class="action-item">
+            <span id="{{action.activity}}"> {{action.name}}  </span>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
